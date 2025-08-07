@@ -11,3 +11,5 @@ Umami 0.0.1:
 - La seccion de catalogo cuenta con una animacion en concreto, Esta cada vez que se hace hover sobre un producto, este activa una animacion en la imagen del producto, variando estas, ofreciendo más opciones de vistas.
 
 - La pagina cuenta con una pantalla de carga, la cual hasta el momento tiene un tiempo establecido para aparecer en la pagina, no pude co ndicionarlo del todo bien para que solo funcione cuando la pantalla esta cargada
+
+- Se comenzo a trabajar con el sistema de logueo y registro.
