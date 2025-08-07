@@ -1,0 +1,10 @@
+article.catalogo__boxArticle
+  section.catalogo__boxImg
+    img.catalogo__img(src=platoSalida.img, alt=platoSalida.nombre) 
+  section.catalogo__boxHeader
+    .catalogo__nombre
+      h3.catalogo__h3= platoSalida.nombre
+  section.catalogo__boxFooter
+    span.catalogo__precio $#{(platoSalida.precio * dolarSalida).toFixed(0).slice(0)}
+      span.centavos #{platoSalida.precio.slice(-2)}
+    //- a.catalogo__boton(href=`/plato/${platoSalida.slug}`) Ver Detalle

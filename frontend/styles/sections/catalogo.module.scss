@@ -1,0 +1,253 @@
+@use '../base/variables.module.scss' as v;
+@use '../base/mixins.module.scss' as m;
+
+.catalogo {    
+    background-image: linear-gradient( v.$backgroundcolor-uno, v.$backgroundcolor-dos, v.$backgroundcolor-dos), url(https://wallpapers.com/images/hd/food-4k-spdnpz7bhmx4kv2r.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    padding: 3% 0;
+    &__flexPrincipal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 14%;
+        padding: 14.5% 5%;
+        @media (min-width:768px) {
+            padding: 7.5% 5%;
+            margin: 0;
+        }
+    }
+    &__bienvenida {
+        width: 90%;
+        margin: 0 auto 5% auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width:768px) {
+            width: 60%;
+        }
+    }
+    &__h2 {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        text-align: center;
+        font-style: normal;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        color: white;
+        text-transform: capitalize;
+        font-size: 3.6rem;
+        &.titulo {
+            margin: 0;
+        }
+    }
+    &__h3 {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        color: v.$color-naranja-intenso;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+    }
+    &__parrafo {
+        width: 100%;
+        margin: 0rem auto 1rem;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        color: v.$color-siete;
+        text-align: center;
+        @media (min-width:768px){
+            width: 80%;
+            text-align: center;
+        }
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 1rem auto;
+        width: 90%;
+        gap: 2rem;
+        @media (min-width:768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    &__productoBox {
+        display: flex;
+        flex-direction: column;
+        border: 4px solid white;
+        border-radius: 8px;
+        background-color: #fafafa;
+        padding: 2vh;
+        gap: 1rem;
+        transition: border .3s ease-in-out;
+        &:hover {
+            border-bottom-color: v.$color-naranja-intenso;
+            cursor: pointer;
+            @media (min-width:768px) {
+                border-left-color: v.$color-naranja-intenso;
+                border-bottom-color: white;
+            }
+        }
+        @media (min-width:768px) {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            height: 30vh;
+        }
+    }
+    &__productoBox:hover .catalogo__flexImagenes {
+        // animation: mover 6s infinite alternate ;
+        transition:  transform 1s ease-in-out;
+        transform: translateX(-100%);
+    }
+    &__ventanaImagenes {
+        position: relative;
+        overflow: hidden;
+        width: 60vh;
+        height: 30vh;
+        max-width: 30vh;
+        max-height: 60vh;
+        border-radius: 8px;
+        margin: 0 auto;
+    }
+    &__flexImagenes {
+        display: flex;
+        flex-direction: row;
+        transition: transform 0.3s ease;
+    }
+    &__productoImg {
+        position: relative;
+        width: 100%;
+        min-width: 100%;
+        height: 30vh;
+        max-height: 60vh;
+    }
+    &__infoBox {
+        position: relative;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        height: 90%;
+        gap: 1rem;
+    }
+    &__header {
+        margin-top: 0;
+        margin-bottom: auto;
+        width: 90%;
+        padding: 0 .2rem;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto 0 auto;
+        gap: 0;
+    }
+    &__footer {
+        margin-top: auto;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto 0 auto;
+        width: 100%;
+        gap: 1rem;
+
+    }
+    &__h4 {
+        color: v.$color-diez;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    &__tipo {
+        font-size: .8rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: v.$color-naranja-intenso;
+    }
+    &__spanPrecio {
+        font-size: 1.6rem;
+        color: v.$color-naranja-intenso;
+        font-family: v.$fuenteParrafo;
+        font-weight: 900;
+        margin: auto auto 0 auto;
+        position: relative;
+        bottom: 0;
+    }
+    &__parrafoProducto {
+        text-align: justify;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        color: v.$color-siete;
+        text-align: center;
+        width: 80%;
+        font-size: .8rem;
+        margin: 0 auto;
+        color: v.$color-once;
+        @media (min-width:768px) {
+            flex-direction: row;
+            font-size: 1rem;
+        }
+    }
+    
+    &__btn {
+        padding: .6rem 10%;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-weight:700;
+        min-width: 60%;
+        max-width: 60%;
+        width: 60%;
+        background-color: v.$color-naranja-intenso;
+        color: white;
+        border: 1px solid white;
+        transition-property: background, color, border;
+        transition-duration: .3s;
+        text-align: center;
+        text-decoration: none;
+        &:hover {
+            background-color: v.$color-naranja-intenso;
+            border-color: white;
+            color: white;
+            cursor: pointer;
+        }
+        @media (min-width:600px) {
+            font-size: 1rem;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+
+@keyframes mover {
+    0% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}

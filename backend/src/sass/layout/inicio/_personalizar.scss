@@ -1,0 +1,50 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.personalizar {
+    width: 100%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-image: url(https://yummi-theme.myshopify.com/cdn/shop/files/bg-2.jpg?v=1614334584&width=1920);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin: 0 auto;
+    }
+    // &__box {
+    // }
+    &__parrafo {
+        font-size: 1.8rem;
+        color: #555;
+        margin: 0;
+    }
+    &__h2Titulo {
+        color: v.$color-naranja-intenso;
+        text-align: center;
+        margin: 0;
+        font-size: 3rem;
+    }
+    &__h3Titulo {
+        color: #555;
+        text-align: start;
+        margin: 0;
+        font-size: 1.7rem;
+    }
+    &__button {
+        background-color: v.$color-naranja-intenso;
+        padding: 1rem 3rem;
+        text-transform: uppercase;
+        color: white;
+        border: none;
+        transition: background .5s .1s;
+        &:hover {
+            background-color: #f4b618;
+            cursor: pointer;
+        }
+    }
+}

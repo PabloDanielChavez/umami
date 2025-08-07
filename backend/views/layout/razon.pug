@@ -1,0 +1,18 @@
+section.razon
+  .razon__grid
+    section.razon__box
+      .razon__boxImg
+        img.razon__img(src='https://yummi-theme.myshopify.com/cdn/shop/files/img-1.jpg?v=1614334579' alt='')
+    section.razon__box
+      .razon__boxGrid
+        section.razon__bienvenida
+          h2.razon__h2Titulo &iquest;Qu&eacute; hace que nuestros men&uacute;s sean especiales?
+        section.razon__boxRazones
+          article.razon__boxArticuloGrid
+            each razon in razonPlatosSalida
+              section.razon__boxArticulo
+                .razon__boxArticuloBox
+                  img.razon__boxArticuloImg(src=razon.img, alt=razon.nombre)
+              section.razon__boxArticuloInformacion
+                h3.razon__h3Titulo= razon.nombre
+                p.razon__parrafo= razon.informacion

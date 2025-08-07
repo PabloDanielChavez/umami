@@ -1,0 +1,205 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+body {
+    position: relative;
+}
+
+.ventana {
+    overflow: hidden;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 2.9rem;
+        @include m.tabletXL {
+            font-size: 3.9rem;
+        }
+        @include m.desktop {
+            font-size: 4.5rem;
+        }
+        @include m.desktopXXL {
+            font-size: 5.1rem;
+        }
+
+}
+
+h2 {
+    font-family: v.$fuenteTituloProfesion;
+    font-size: 2.6rem;
+        @include m.tabletXL {
+            font-size: 3.6rem;
+        }
+        @include m.desktop {
+            font-size: 4.0rem;
+        }
+        @include m.desktopXXL {
+            font-size: 4.6rem;
+        }
+
+}
+
+h3 {
+    font-family: v.$fuenteTituloProfesion;
+    font-size: 2rem;
+        @include m.tabletXL {
+            font-size: 2.2rem;
+        }
+        @include m.desktop {
+            font-size: 2.4rem;
+        }
+        @include m.desktopXXL {
+            font-size: 2.6rem;
+        }
+
+}
+
+p {
+    // font-family: v.$fuenteParrafo;
+    font-size: 1.6rem;
+        @include m.tabletXL {
+            font-size: 1.7rem;
+        }
+        @include m.desktop {
+            font-size: 1.8rem;
+        }
+        @include m.desktopXXL {
+            font-size: 1.9rem;
+        }
+}
+
+.redes {
+    display: grid;
+    gap: 1.4rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+.redes__boxRedSocial {
+    color: v.$color-beige-claro;
+}
+.redes span {
+    font-size: 1.6rem;
+}
+
+.aCopy {
+    color: v.$color-beige-claro;
+    text-decoration: none;
+}
+.Copyright {
+    font-family: v.$fuenteTituloProfesion;
+    color: v.$color-beige-claro;
+    text-align: center;
+}
+
+.colorUno {
+    color: v.$color-beige-claro;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0rem;
+    width: 100%;
+
+    &__Input {
+        box-shadow: none;
+        background-color: unset;
+        height: 2rem;
+        width: 90%;
+        min-width: 90%;
+        max-width: 90%;
+        padding: .3rem .7rem;
+        border: none;
+        border-bottom: 2px solid v.$color-beige-claro;
+        border-radius: 2px;
+        // background-color: v.$colorFondoBody;
+        transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+        outline: none;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.2rem;
+        font-weight: 100;
+
+        &:focus {
+            border-color: v.$color-naranja-intenso;
+        }
+
+
+
+    }
+
+    textarea {
+        height: 10rem;
+        min-height: 10rem;
+        max-height: 20rem;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__parrafoDos {
+        display: flex;
+        flex-direction: column;
+        font-family: v.$fuenteParrafo;
+
+        font-size: 1rem;
+        font-weight: 400;
+        white-space: nowrap;
+
+        & span,
+        & a {
+            font-weight: 900;
+            color: v.$color-naranja-intenso;
+        }
+    }
+}
+
+.pantallaCarga {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    background-color: v.$color-verde-oscuro;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    transition: opacity .3s ease-in-out;
+
+    & .spanCarga {
+        position: relative;
+        background-color: v.$color-beige-claro;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 100%;
+        animation: cargaSpan 1.2s infinite forwards;
+
+        @keyframes cargaSpan {
+            0% {
+                opacity: 0;
+                transform: scale(.3);
+            }
+
+            80% {
+                opacity: .7;
+                transform: scale(.7);
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+    }
+}

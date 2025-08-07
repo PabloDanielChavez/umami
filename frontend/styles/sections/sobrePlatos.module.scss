@@ -1,0 +1,103 @@
+@use '../base/variables.module.scss' as v;
+@use '../base/mixins.module.scss' as m;
+
+.sobrePlatos {
+    padding: 6rem 0;
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-bottom: 6rem;
+    }
+    &__bienvenida {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    &__h2Titulo {
+        font-family: v.$fuenteTituloProfesion;
+        margin-bottom: 1rem;
+    }
+    &__parrafo {
+        font-family: v.$fuenteParrafo;
+        font-size: 1.8rem;
+        color: #555;
+    }
+    &__box {
+        width: 90%;
+        margin: 0 auto 4rem auto;
+    }
+    &__columnas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        @include m.tabletXL {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            align-items: center;
+        }
+    }
+    &__h3 {
+        text-align: end;
+        color: v.$color-naranja-intenso;
+        font-family: v.$fuenteTituloProfesion;
+        text-transform: uppercase;
+        margin-bottom: .8rem;
+        font-size: 1.7rem;
+    }
+    &__parrafo {
+        text-align: center;
+        font-family: v.$fuenteTituloProfesion;
+        margin: 0;
+        font-size: 1.5rem;
+        color: #555;
+    }
+    &__item {
+        font-size: 4rem;
+        transition: transform .4s ease-in-out;
+        &:hover {
+            transform: perspective(100px) rotateY(180deg);
+            cursor: pointer;
+        }
+    }
+    &__articleIzquierda,
+    &__articleCentral,
+    &__articleDerecha{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.6rem;
+    }
+    &__articleIzquierda {
+        flex-direction: row;
+        & .sobrePlatos__h3 {
+            text-align: end;
+        }
+        &  .sobrePlatos__parrafo {
+            text-align: end;
+        }
+    }
+    &__articleCentral {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    &__articleDerecha {
+        flex-direction: row-reverse;
+        & .sobrePlatos__h3 {
+            text-align: start;
+        }
+        &  .sobrePlatos__parrafo {
+            text-align: start;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+section.sobrePlatos
+  .sobrePlatos__grid
+    .sobrePlatos__bienvenida
+      h2.sobrePlatos__h2Titulo Cocina internacional
+      p.sobrePlatos__parrafo Plato internacional incre&iacute;blemente sabroso
+    .sobrePlatos__box
+      .sobrePlatos__columnas
+        .sobrePlatos__columnaIzquierda
+          each plato in sobrePlatosSalidaIzquierda
+            article.sobrePlatos__articleIzquierda
+              article
+                h3.sobrePlatos__h3= plato.nombre
+                p.sobrePlatos__parrafo= plato.informacion
+              article
+                span.sobrePlatos__item
+                  img(src=plato.img, alt=plato.nombre) 
+        .sobrePlatos__articleCentral
+          img( class="sobrePlatos__img" src='https://yummi-theme.myshopify.com/cdn/shop/files/gallery-4.jpg?v=1614334580&width=1500' alt='Platito')
+        .sobrePlatos__columnaDerecha
+          each plato in sobrePlatosSalidaDerecha
+            article.sobrePlatos__articleDerecha
+              article
+                h3.sobrePlatos__h3= plato.nombre
+                p.sobrePlatos__parrafo= plato.informacion
+              article
+                span.sobrePlatos__item
+                  img(src=plato.img, alt=plato.nombre)
+                        

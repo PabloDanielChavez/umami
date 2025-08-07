@@ -1,0 +1,60 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.bienvenida {
+    background-image: linear-gradient(rgba(10, 10, 36, 0.5), rgba(10, 10, 36, 0.5)), url(../img/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: red;
+    &__grid {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 10%;
+        margin-right: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    &__parrafo {
+        color: white;
+    }
+    &__h1Titulo {
+        color: v.$color-beige-claro;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 4rem;
+    }
+    &__button { 
+        margin-top: 2rem;
+        padding: 10% auto;
+        font-size: 1.2em;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        text-shadow: 2px 1px 4px #4a0b45;
+        transition: background 0.15s ease-in-out;
+        background-image: linear-gradient(rgba(10, 10, 36, 0.5), rgba(10, 10, 36, 0.5)), url(../img/colores.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        box-shadow: 0 0 20px 5px rgb(35, 5, 35);
+        border: 1px solid rgb(221, 212, 212);
+        border-radius: 8px;
+        transition: transform 0.1s ease-in-out;
+        width: 10rem;
+        text-transform: uppercase;
+    }
+} 

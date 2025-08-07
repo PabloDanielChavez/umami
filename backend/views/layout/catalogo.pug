@@ -1,0 +1,20 @@
+section#catalogo.catalogo
+  .catalogo__flexPrincipal
+    article.catalogo__bienvenida
+      h2.catalogo__h2.titulo Nuestro Men&uacute;
+      h3.catalogo__h3 PLATOS CREMOSOS
+      p.catalogo__parrafo
+        | Te damos la bienvenida a un mundo de sabores auténticos, donde cada plato refleja nuestra pasión por la cocina artesanal. En nuestro espacio gastronómico, vas a encontrar almuerzos y cenas preparados con ingredientes frescos y de calidad, pensados para ofrecerte una experiencia que combina sabor, dedicación y calidez.
+    .catalogo__grid
+      each plato in catalogoPlatosSalida
+        a(href=`/plato/${plato.slug}`)
+          article(id=`plato-${plato.slug}` class="catalogo__productoBox")
+            img#productoImg.catalogo__productoImg(src=plato.img, alt=plato.nombre)
+            .catalogo__infoBox
+              header.catalogo__header
+                h4.catalogo__h4= plato.nombre
+                span.catalogo__span $#{(plato.precio * dolarSalida).toFixed(0).slice(0)}
+                  span.centavos ,#{plato.precio.slice(-2)}
+              p.catalogo__parrafoProducto #{plato.informacion}
+              footer.catalogo__footer
+                button.catalogo__btn(type='button' id=`plato-${plato.slug}`) ver detalles

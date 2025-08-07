@@ -1,0 +1,21 @@
+git config --global user.name ""
+git config --global user.email ""
+
+git init
+
+git add .
+
+git commit -m "Mi primer commit"
+
+
+echo "# NUEVO" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/PabloDanielChavez/NUEVO.git
+git push -u origin main
+
+git remote add origin https://github.com/PabloDanielChavez/NUEVO.git
+git branch -M main
+git push -u origin main

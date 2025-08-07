@@ -1,0 +1,29 @@
+¿Cuál es el propósito principal de la página web? ¿Querés que informe, venda productos, capte clientes potenciales u otra cosa?
+
+¿Hay algún objetivo específico que consideres clave para que el proyecto sea exitoso?
+
+¿Cómo te imaginás que los usuarios van a interactuar con la página?
+
+¿Ya tenés el contenido preparado, o necesitarías ayuda para crear textos, imágenes o videos?
+
+¿Qué secciones te gustaría incluir en la página? Por ejemplo, "Quiénes somos", "Servicios", "Tienda", "Blog", "Contacto", entre otras.
+
+¿El contenido de la página debería estar en un solo idioma o querés que sea multilingüe?
+
+¿Tenés ya una identidad visual definida, como un logotipo, colores corporativos o tipografías específicas?
+
+¿Preferís un diseño más minimalista, moderno, clásico, o tenés algo específico en mente?
+
+Después de que lancemos la página, ¿quién se va a encargar de actualizarla y mantenerla? ¿Te gustaría recibir capacitación para manejarla?
+
+Por último, ¿hay algo que definitivamente no querés que aparezca en la página?
+
+https://yummi-theme.myshopify.com
+
+npx sass --watch src/sass/index.scss:public/app.css
+
+npm i --save-dev nodemon
+
+Versiones
+
+npm install bcrypt

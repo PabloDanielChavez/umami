@@ -1,0 +1,102 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.razon {
+    width: 100%;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-image: url(https://yummi-theme.myshopify.com/cdn/shop/files/bg-img-1_1.png?v=1614334735&width=1920);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__grid {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        @include m.tabletXL {
+            display: grid;
+            width: 90%;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+    // &__box {
+    // }
+    &__boxImg,
+    &__img {
+        margin: 0 auto;
+        width: 10rem;
+        @include m.tabletXL {
+            width: 15rem;
+        }
+        @include m.desktop {
+            width: 20rem;
+        }
+        @include m.desktopXL {
+            width: 25rem;
+        }
+        @include m.desktopXXL {
+            width: 30rem;
+        }
+    }
+    &__img {
+        // width: 10rem;
+    }
+    &__boxGrid {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1rem;
+    }
+    &__bienvenida {
+    }
+    &__h2Titulo {
+        // font-family: v.$fuenteTituloProfesion;
+        text-transform: uppercase;
+        color: #555;
+        text-align: center;
+        font-size: 2rem;
+        @include m.tablet {
+            margin-bottom: .8rem;
+        }
+    }
+    // &__boxRazones {
+    // }
+    &__boxArticuloGrid {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 0rem;
+    }
+    &__boxArticulo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    // &__boxArticuloBox {
+
+    // }
+    // &__boxArticuloImg {
+
+    // }
+    // &__boxArticuloInformacion {
+
+    // }
+    &__h3Titulo {
+        font-family: v.$fuenteTituloProfesion;
+        text-align: start;
+        color: v.$color-naranja-intenso;
+        margin-bottom: .8rem;
+        font-size: 1.7rem;
+    }
+    &__parrafo {
+        font-family: v.$fuenteParrafo;
+        text-align: start;
+        margin: 0;
+        font-size: 1.5rem;
+        color: #555;
+    }
+}
