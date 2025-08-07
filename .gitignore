@@ -50,3 +50,4 @@ docker-compose.override.yml
 documentos/
 
 backend/public/
+backend/config/db.js
